@@ -8,19 +8,25 @@ import AttendanceStack from './AttendanceStack';
 import FeeStack from './FeeStack';
 import DueStack from './DueStack';
 import ProfileStack from './ProfileStack';
+import { changeNavigationBarColor } from 'react-native-navigation-bar-color';
+import { useEffect } from 'react';
 
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
+useEffect(() => {
+  changeNavigationBarColor('#000000', false);
+}, []);
+
   return (
     <Tab.Navigator
       screenOptions={({ route, focused }) => ({
         headerShown: false,
         tabBarShowLabel: false,
         tabBarStyle: {
-          height: 65,
-          paddingBottom: Platform.OS === 'android' ? 8 : 20,
-          paddingTop: 8,
+          height: Platform.OS === 'android' ? 60 : 80,
+          paddingBottom: Platform.OS === 'android' ?90 : 20,
+          // paddingTop: 8,
           backgroundColor: '#e81717',
         },
 
@@ -45,6 +51,7 @@ export default function TabNavigator() {
                 height: 44,
                 // paddingTop: 8,
                 // borderRadius: 22,
+                // marginBottom: focused ? 20 : 0,
                 justifyContent: 'center',
                 alignItems: 'center',
                 backgroundColor: focused ? '#1e88e5' : 'transparent',
