@@ -3,6 +3,6 @@
   "compilerOptions": {
     "types": ["jest"],
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "res/navigation/HomeStack.jsx", "res/Screen/HomeScreen.jsx", "res/Screen/ProfileScreen.jsx", "res/Screen/FeeScreen.jsx", "res/Screen/DueScreen.jsx", "res/Screen/AttendanceScreen.jsx", "res/navigation/TabNavigator.jsx", "res/navigation/ProfileStack.jsx", "res/navigation/FeeStack.jsx", "res/navigation/DueStack.jsx", "res/navigation/AttendanceStack.jsx"],
   "exclude": ["**/node_modules", "**/Pods"]
 }
